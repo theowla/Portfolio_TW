@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-s*)&_aa2dcda9z6%%j5y84_wbr1o@b_8#n9$lklxn_gr*k4e)2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = false
 
 ALLOWED_HOSTS = ["*"]
 
@@ -117,15 +117,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+# settings.py
+
+# For static files during development:
 STATIC_URL = '/static/'
 
-# Collect static files into one directory (production)
+# The root directory for static files collection
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'portfolio/portfolio_tw/static'),
+]
+
+# If you're using collectstatic for deployment, use this:
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Static files directories for development (optional)
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Make sure this points to the static folder
-]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
