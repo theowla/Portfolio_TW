@@ -128,7 +128,7 @@ STATICFILES_DIRS = [
 ]
 
 # If you're using collectstatic for deployment, use this:
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/home/ubuntu/Portfolio_TW/portfolio/static/'
 
 
 # Default primary key field type
