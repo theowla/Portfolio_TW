@@ -117,18 +117,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-# settings.py
 
-# For static files during development:
 STATIC_URL = '/static/'
 
-# The root directory for static files collection
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'portfolio/portfolio_tw/static'),
+    BASE_DIR / "static",  # Include your static directory here if necessary
 ]
 
-# If you're using collectstatic for deployment, use this:
-STATIC_ROOT = '/home/ubuntu/Portfolio_TW/portfolio/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"  # This is where collectstatic will store the files for production
 
 
 # Default primary key field type
