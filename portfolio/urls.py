@@ -20,5 +20,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('secure-admin', admin.site.urls), 
-    path("", include("portfolio_tw.urls"))
+    path("", include("portfolio.urls"))
 ]
