@@ -119,9 +119,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio/portfolio_tw/static'),
 ]
 
+# STATIC
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'  # o ruta absoluta: '/home/ubuntu/Portfolio_TW/portfolio/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
+# MEDIA
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
