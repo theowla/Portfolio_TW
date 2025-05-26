@@ -16,7 +16,8 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -113,22 +114,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
-
-# settings.py
-
-# For static files during development:
-STATIC_URL = '/static/'
-
 # The root directory for static files collection
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio/portfolio_tw/static'),
 ]
 
-# If you're using collectstatic for deployment, use this:
-STATIC_ROOT = '/home/ubuntu/Portfolio_TW/portfolio/static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'  # o ruta absoluta: '/home/ubuntu/Portfolio_TW/portfolio/static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
