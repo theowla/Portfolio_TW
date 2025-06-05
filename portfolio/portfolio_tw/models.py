@@ -4,6 +4,7 @@ class Post(models.Model):
     name = models.CharField(max_length=100, default="Untitled Project")  # Default project name
     description = models.TextField(blank=True, null=True)  # Optional field
     tech = models.TextField(blank=True, null=True)  # Optional field
+    link = models.TextField(blank=True, null=True)  # Optional field
     image = models.ImageField(upload_to='images/')  # Field for the image
 
     def __str__(self):
